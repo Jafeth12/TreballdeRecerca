@@ -1,18 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo1"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/start_icon"
+        android:layout_width="100dp"
+        android:contentDescription="@string/appTitle"
+        android:layout_height="80dp"
+        android:layout_marginStart="0dp"
+        android:src="@drawable/ic_deltax_icon" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/start_TextView"
+        android:text="@string/appTitle"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_below="@+id/start_icon"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        />
+
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/goFisica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start_TextView"
+        android:layout_marginTop="130dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/fisica"
+        android:textSize="18sp"/>
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/goMates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goFisica"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorSecondary"
+        android:text="@string/mates"
+        android:textSize="18sp"/>
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/goTecno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goMates"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorTerciario"
+        android:text="@string/tecno"
+        android:textSize="18sp"/>
+
+
+
+</RelativeLayout>

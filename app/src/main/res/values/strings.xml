@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">testandroid</string>
+    <string name="app_name">Problem Solver</string>
+    <string name="appTitle" translatable="false">Problem solver</string>
+    <string name="fisica">Física</string>
+    <string name="mates">Matemáticas</string>
+    <string name="tecno">Tecnología</string>
+    <string name="about">Sobre mí</string>
 </resources>
