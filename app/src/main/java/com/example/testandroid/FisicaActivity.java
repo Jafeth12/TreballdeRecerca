@@ -2,6 +2,8 @@ package com.example.testandroid;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -26,6 +28,35 @@ public class FisicaActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle(getString(R.string.fisica));
 
+        //declaració del tablayout
+        final TabLayout tabLayout = findViewById(R.id.tabLayoutFisica);
+        final ViewPager viewPager = findViewById(R.id.viewPagerFisica);
+        final ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
+
+        //afegir les tabs per anar als diferents fragments
+        adapter.addFragment(new FragmentCaidaLibre(), getString(R.string.freeFall));
+        adapter.addFragment(new FragmentMru(), getString(R.string.mru));
+        adapter.addFragment(new FragmentMcu(), getString(R.string.mcu));
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
         //creació del botó per tornar al homepage
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -46,7 +77,7 @@ public class FisicaActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.info_menu) {
-            String url = "https://github.com/jafeth12/treball-de-recerca";
+            String url = "https://github.com/jafeth12/TreballdeRecerca";
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(url));
             startActivity(i);

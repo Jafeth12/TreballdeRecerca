@@ -56,7 +56,7 @@ public class TecnoActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.info_menu){
-            String url = "https://github.com/jafeth12/treball-de-recerca";
+            String url = "https://github.com/jafeth12/TreballdeRecerca";
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(url));
             startActivity(i);
