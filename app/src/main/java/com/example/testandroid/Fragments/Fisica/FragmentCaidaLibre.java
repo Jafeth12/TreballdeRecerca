@@ -40,6 +40,8 @@ public class FragmentCaidaLibre extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         Button btn = getView().findViewById(R.id.fisicaFF_btn);
 
+        //TODO ARREGLAR QUE CRASHEE CUANDO TODO ESTÁ VACÍO AQUÍ Y EN MRU
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
