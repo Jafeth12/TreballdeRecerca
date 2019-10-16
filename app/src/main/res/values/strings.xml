@@ -8,4 +8,16 @@
     <string name="freeFall">Caída libre</string>
     <string name="mru" translatable="false">MRU</string>
     <string name="mcu" translatable="false">MCU</string>
+    <string name="y0">Altura inicial (y0)</string>
+    <string name="y1">Altura final (y1)</string>
+    <string name="v0">Velocidad inicial (v0)</string>
+    <string name="t">Tiempo (t)</string>
+    <string name="g">Gravedad (g)</string>
+    <string name="calc">Calcular</string>
+    <string name="noNegative">No puede ser negativo!</string>
+    <string name="x0">Posición inicial (x0)</string>
+    <string name="x1">Posición final (x1)</string>
+    <string name="tNo">t no es posible</string>
+    <string name="vNo">v no es posible</string>
+    <string name="defaultG" translatable="false">-9.8</string>
 </resources>

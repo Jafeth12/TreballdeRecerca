@@ -6,16 +6,97 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/fisicaMRU_inputX0"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/fisicaMRU_valueX0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/x0"
+            android:inputType="numberDecimal|numberSigned"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/fisicaMRU_inputX1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fisicaMRU_inputX0">
+
+        <EditText
+            android:id="@+id/fisicaMRU_valueX1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/x1"
+            android:inputType="numberDecimal|numberSigned"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/fisicaMRU_inputV0"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fisicaMRU_inputX1">
+
+        <EditText
+            android:id="@+id/fisicaMRU_valueV0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/v0"
+            android:inputType="numberDecimal|numberSigned"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/fisicaMRU_inputTiempo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fisicaMRU_inputV0">
+
+        <EditText
+            android:id="@+id/fisicaMRU_valueTiempo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/t"
+            android:inputType="numberDecimal|numberSigned"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/fisicaMRU_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="mru"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:text="@string/calc"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintTop_toBottomOf="@id/fisicaMRU_inputTiempo"/>
+
+    <TextView
+        android:id="@+id/fisicaMRU_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="res"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fisicaMRU_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fisicaMRU_btn"
+        tools:text="result" />
 
 </android.support.constraint.ConstraintLayout>

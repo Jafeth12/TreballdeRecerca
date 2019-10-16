@@ -48,6 +48,7 @@ public class MatesActivity extends AppCompatActivity {
             window.setStatusBarColor(Color.parseColor(color));
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();

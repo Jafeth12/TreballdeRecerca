@@ -6,17 +6,121 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/fisicaFF_inputY0"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/fisicaFF_valueY0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/y0"
+            android:inputType="numberDecimal|numberSigned" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/fisicaFF_inputY1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fisicaFF_inputY0">
+
+        <EditText
+            android:id="@+id/fisicaFF_valueY1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/y1"
+            android:inputType="numberDecimal|numberSigned" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/fisicaFF_inputV0"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fisicaFF_inputY1">
+
+        <EditText
+            android:id="@+id/fisicaFF_valueV0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/v0"
+            android:inputType="numberDecimal|numberSigned" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/fisicaFF_inputTiempo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fisicaFF_inputV0">
+
+        <EditText
+            android:id="@+id/fisicaFF_valueTiempo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/t"
+            android:inputType="numberDecimal|numberSigned" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/fisicaFF_inputG"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fisicaFF_inputTiempo">
+
+        <EditText
+            android:id="@+id/fisicaFF_valueG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/g"
+            android:text="@string/defaultG"
+            android:inputType="numberDecimal|numberSigned" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/fisicaFF_btn"
+        style="Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/freeFall"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:layout_marginTop="8dp"
+        android:text="@string/calc"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintTop_toBottomOf="@+id/fisicaFF_inputG" />
+
+    <TextView
+        android:id="@+id/fisicaFF_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="res"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fisicaFF_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fisicaFF_btn"
+        tools:text="result" />
+
 
 </android.support.constraint.ConstraintLayout>

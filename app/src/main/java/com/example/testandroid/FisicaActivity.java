@@ -1,8 +1,10 @@
 package com.example.testandroid;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,14 +14,33 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
-import java.util.zip.Inflater;
+import com.example.testandroid.Fragments.Fisica.FragmentMcu;
+import com.example.testandroid.Fragments.Fisica.FragmentMru;
+import com.example.testandroid.Fragments.Fisica.FragmentCaidaLibre;
 
 public class FisicaActivity extends AppCompatActivity {
+
+    public TextInputLayout inputBase;
+    public TextInputLayout inputAltura;
+
+    public double parse(String x) {
+        return Double.parseDouble(x);
+    }
+
+    private static double calcSegundoGrado(double a, double b, double c) {
+        double res = (((-1)*b)+Math.sqrt((b*b)-4*((a/2))*c))/(a); //-1*a
+        double res2 = (((-1)*b)-Math.sqrt((b*b)-4*((a/2))*c))/(a); //-1*a
+
+        return res;
+
+        //TODO ACABAR ESTO AQUÍ Y EN FREEFALL
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fisica);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         //declaració del toolbar
         Toolbar toolbar = findViewById(R.id.toolbarFisica);
@@ -85,6 +106,7 @@ public class FisicaActivity extends AppCompatActivity {
         } else
             return super.onOptionsItemSelected(item);
         }
+//**************************************************************************************************
 
 }
 

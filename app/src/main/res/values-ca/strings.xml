@@ -6,4 +6,15 @@
     <string name="tecno">Tecnologia</string>
     <string name="about">Sobre mi</string>
     <string name="freeFall">CAIGUDA LLIURE</string>
+    <string name="g">Gravetat (g)</string>
+    <string name="t">Temps (t)</string>
+    <string name="v0">Velocitat inicial (v0)</string>
+    <string name="y0">Altura inicial (y0)</string>
+    <string name="y1">Altura final (y1)</string>
+    <string name="calc">Calcular</string>
+    <string name="noNegative">No pot ser negatiu!</string>
+    <string name="x0">Posició inicial (x0)</string>
+    <string name="x1">Posició final (x1)</string>
+    <string name="tNo">t no és possible</string>
+    <string name="vNo">v no és possible</string>
 </resources>
