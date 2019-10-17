@@ -17,4 +17,6 @@
     <string name="x1">Posició final (x1)</string>
     <string name="tNo">t no és possible</string>
     <string name="vNo">v no és possible</string>
+    <string name="help">Ajuda</string>
+    <string name="helpHow">Deixa en blanc la incògnita</string>
 </resources>

@@ -95,8 +95,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/g"
-            android:text="@string/defaultG"
-            android:inputType="numberDecimal|numberSigned" />
+            android:inputType="numberDecimal|numberSigned"
+            android:text="@string/defaultG" />
 
     </android.support.design.widget.TextInputLayout>
 

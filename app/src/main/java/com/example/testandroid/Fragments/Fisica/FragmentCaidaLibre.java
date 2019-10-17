@@ -41,6 +41,7 @@ public class FragmentCaidaLibre extends Fragment {
         Button btn = getView().findViewById(R.id.fisicaFF_btn);
 
         //TODO ARREGLAR QUE CRASHEE CUANDO TODO ESTÁ VACÍO AQUÍ Y EN MRU
+        //TODO INTENTAR SEPARAR OPERACIONES POR CLASES
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +60,8 @@ public class FragmentCaidaLibre extends Fragment {
                 String valueT = t1.getText().toString();
                 String valueG = g1.getText().toString();
 
+
+
                 /*
                 if (parse(valueT) < 0) {
                     textView.setText("");
@@ -70,6 +73,8 @@ public class FragmentCaidaLibre extends Fragment {
                     return;
                 }
                  */
+
+
 
                 if (valueT.equals("")) {
                     if (valueV0.equals("0")) {

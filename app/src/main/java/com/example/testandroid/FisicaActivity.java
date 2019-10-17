@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.testandroid.Fragments.Fisica.FragmentMcu;
 import com.example.testandroid.Fragments.Fisica.FragmentMru;
@@ -28,13 +29,14 @@ public class FisicaActivity extends AppCompatActivity {
     }
 
     private static double calcSegundoGrado(double a, double b, double c) {
-        double res = (((-1)*b)+Math.sqrt((b*b)-4*((a/2))*c))/(a); //-1*a
-        double res2 = (((-1)*b)-Math.sqrt((b*b)-4*((a/2))*c))/(a); //-1*a
+        double res = (((-1) * b) + Math.sqrt((b * b) - 4 * ((a / 2)) * c)) / (a); //-1*a
+        double res2 = (((-1) * b) - Math.sqrt((b * b) - 4 * ((a / 2)) * c)) / (a); //-1*a
 
         return res;
 
         //TODO ACABAR ESTO AQUÍ Y EN FREEFALL
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,17 +99,22 @@ public class FisicaActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.info_menu) {
-            String url = "https://github.com/jafeth12/TreballdeRecerca";
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(url));
-            startActivity(i);
-            return true;
-        } else
-            return super.onOptionsItemSelected(item);
+        //TODO AÑADIR ESTO EN LOS OTROS
+        switch (item.getItemId()) {
+            case R.id.info_menu:
+                String url = "https://github.com/jafeth12/TreballdeRecerca";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+                return true;
+            case R.id.help_menu:
+                Toast.makeText(this, R.string.helpHow, Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-//**************************************************************************************************
+    }
+
 
 }
-
 

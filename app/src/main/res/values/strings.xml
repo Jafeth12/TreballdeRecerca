@@ -5,6 +5,8 @@
     <string name="mates">Matemáticas</string>
     <string name="tecno">Tecnología</string>
     <string name="about">Sobre mí</string>
+    <string name="helpHow">Deja en blanco la incógnita</string>
+    <string name="help">Ayuda</string>
     <string name="freeFall">Caída libre</string>
     <string name="mru" translatable="false">MRU</string>
     <string name="mcu" translatable="false">MCU</string>
