@@ -10,20 +10,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.testandroid.FisicaActivity;
+import com.example.testandroid.FormulasMRUA;
+import com.example.testandroid.FormulasMRUyMCU;
 import com.example.testandroid.R;
 
 public class FragmentCaidaLibre extends Fragment {
 
-    private TextInputLayout inputG;
-    private TextInputLayout inputT;
+    FormulasMRUyMCU ras = new FormulasMRUyMCU();
+    FormulasMRUA ras2 = new FormulasMRUA();
 
-    private double calcularArea(double b, double h) {
-        return (b*h)/2;
-    }
+    private EditText g1FF, a1FFV1, a1FFV2;
+    private TextInputLayout y01FF1, y11FF1, g1FF1;
+    private TextInputLayout a11FFV1, a11FFV2, x11FFV2, x011FFV2;
+    TextView textFormulaFF, textFormulaV1, textFormulaV2;
 
     public double parse(String number) {
         return Double.parseDouble(number);
@@ -39,41 +45,106 @@ public class FragmentCaidaLibre extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         Button btn = getView().findViewById(R.id.fisicaFF_btn);
+        Switch switchFF = getView().findViewById(R.id.switchFF);
+        final TextView textView = getView().findViewById(R.id.fisicaFF_result);
+        final TextView textView1 = getView().findViewById(R.id.fisicaFFV1_result);
+        final TextView textView2 = getView().findViewById(R.id.fisicaFFV2_result);
+        final Toast soloIncognita = Toast.makeText(getActivity(),"No más de un incógnita",Toast.LENGTH_LONG);
 
-        //TODO ARREGLAR QUE CRASHEE CUANDO TODO ESTÁ VACÍO AQUÍ Y EN MRU
-        //TODO INTENTAR SEPARAR OPERACIONES POR CLASES
+        switchFF.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                y01FF1 = getView().findViewById(R.id.fisicaFF_inputY0);
+                y11FF1 = getView().findViewById(R.id.fisicaFF_inputY1);
+                g1FF1 = getView().findViewById(R.id.fisicaFF_inputG);
+                g1FF = getView().findViewById(R.id.fisicaFF_valueG);
+
+                a11FFV1 = getView().findViewById(R.id.fisicaFFV1_inputG);
+                a1FFV1 = getView().findViewById(R.id.fisicaFFV1_valueG);
+
+                a11FFV2 = getView().findViewById(R.id.fisicaFFV2_inputG);
+                a1FFV2 = getView().findViewById(R.id.fisicaFFV2_valueG);
+                x11FFV2 = getView().findViewById(R.id.fisicaFFV2_inputX1);
+                x011FFV2 = getView().findViewById(R.id.fisicaFFV2_inputX0);
+
+                textFormulaFF = getView().findViewById(R.id.textFormulaFF);
+                textFormulaV1 = getView().findViewById(R.id.textFormulaV1);
+                textFormulaV2 = getView().findViewById(R.id.textFormulaV2);
+
+                if (isChecked) {
+                    y01FF1.setHint(getResources().getString(R.string.y0));
+                    y11FF1.setHint(getResources().getString(R.string.y1));
+                    g1FF1.setHint(getResources().getString(R.string.g));
+                    a11FFV1.setHint(getResources().getString(R.string.g));
+                    a11FFV2.setHint(getResources().getString(R.string.g));
+                    x11FFV2.setHint(getResources().getString(R.string.y1));
+                    x011FFV2.setHint(getResources().getString(R.string.y0));
+                    g1FF.setText(R.string.defaultG);
+                    a1FFV2.setText(R.string.defaultG);
+                    a1FFV1.setText(R.string.defaultG);
+                    textFormulaFF.setText(R.string.freeFallFormula);
+                    textFormulaV1.setText(R.string.v1GFormula);
+                    textFormulaV2.setText(R.string.v2GFormula);
+                } else {
+                    y01FF1.setHint(getResources().getString(R.string.x0));
+                    y11FF1.setHint(getResources().getString(R.string.x1));
+                    x11FFV2.setHint(getResources().getString(R.string.x1));
+                    x011FFV2.setHint(getResources().getString(R.string.x0));
+                    g1FF1.setHint(getResources().getString(R.string.a));
+                    a11FFV2.setHint(getResources().getString(R.string.a));
+                    a11FFV1.setHint(getResources().getString(R.string.a));
+                    a1FFV1.setText("");
+                    g1FF.setText("");
+                    a1FFV2.setText("");
+                    textFormulaFF.setText(R.string.mruaFormula);
+                    textFormulaV1.setText(R.string.v1Formula);
+                    textFormulaV2.setText(R.string.v2Formula);
+                }
+            }
+        });
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView textView = getView().findViewById(R.id.fisicaFF_result);
-                TextInputLayout inputG = getView().findViewById(R.id.fisicaFF_inputG);
-                TextInputLayout inputT = getView().findViewById(R.id.fisicaFF_inputTiempo);
-                EditText y01 = getView().findViewById(R.id.fisicaFF_valueY0);
-                EditText y11 = getView().findViewById(R.id.fisicaFF_valueY1);
-                EditText v01 = getView().findViewById(R.id.fisicaFF_valueV0);
-                EditText t1 = getView().findViewById(R.id.fisicaFF_valueTiempo);
-                EditText g1 = getView().findViewById(R.id.fisicaFF_valueG);
-                String valueY0 = y01.getText().toString();
-                String valueY1 = y11.getText().toString();
-                String valueV0 = v01.getText().toString();
-                String valueT = t1.getText().toString();
-                String valueG = g1.getText().toString();
+                EditText y01FF = getView().findViewById(R.id.fisicaFF_valueY0);
+                EditText y11FF = getView().findViewById(R.id.fisicaFF_valueY1);
+                EditText v01FF = getView().findViewById(R.id.fisicaFF_valueV0);
+                EditText t1FF = getView().findViewById(R.id.fisicaFF_valueTiempo);
+                EditText g1FF = getView().findViewById(R.id.fisicaFF_valueG);
+                String valueY0 = y01FF.getText().toString();
+                String valueY1 = y11FF.getText().toString();
+                String valueV0 = v01FF.getText().toString();
+                String valueT = t1FF.getText().toString();
+                String valueG = g1FF.getText().toString();
 
-
-
-                /*
-                if (parse(valueT) < 0) {
-                    textView.setText("");
-                    inputT.setError("Can't be negative!");
-                    return;
-                } else if (parse(valueG) < 0) {
-                    textView.setText("");
-                    inputG.setError("Can't be negative!");
-                    return;
+                if (valueY0.isEmpty()) {
+                    if (valueY1.isEmpty() | valueV0.isEmpty() | valueT.isEmpty() | valueG.isEmpty()) {
+                        soloIncognita.show();
+                        return;
+                    }
                 }
-                 */
 
+                if (valueY1.isEmpty()) {
+                    if (valueV0.isEmpty() | valueT.isEmpty() | valueG.isEmpty()) {
+                        soloIncognita.show();
+                        return;
+                    }
+                }
+
+                if (valueV0.isEmpty()) {
+                    if (valueT.isEmpty() | valueG.isEmpty()) {
+                        soloIncognita.show();
+                        return;
+                    }
+                }
+
+                if (valueT.isEmpty()) {
+                    if (valueG.isEmpty()) {
+                        soloIncognita.show();
+                        return;
+                    }
+                }
 
 
                 if (valueT.equals("")) {
@@ -169,6 +240,8 @@ public class FragmentCaidaLibre extends Fragment {
 
             }
         });
+
+
     }
 
 

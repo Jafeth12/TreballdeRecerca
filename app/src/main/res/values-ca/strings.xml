@@ -19,4 +19,13 @@
     <string name="vNo">v no és possible</string>
     <string name="help">Ajuda</string>
     <string name="helpHow">Deixa en blanc la incògnita</string>
+    <string name="v">Velocitat (v)</string>
+    <string name="a">Acceleració (a)</string>
+    <string name="t0">Temps inicial (t0)</string>
+    <string name="t1">Tiemps final (t1)</string>
+    <string name="phi">Phi (rad) (φ)</string>
+    <string name="sección">Secció (S)</string>
+    <string name="R">Radi (R)</string>
+    <string name="w">Vel. angular (ω)</string>
+    <string name="phi0">Phi final (rad) (φ)</string>
 </resources>

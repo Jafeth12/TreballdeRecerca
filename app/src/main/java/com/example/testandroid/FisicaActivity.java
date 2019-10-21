@@ -28,16 +28,6 @@ public class FisicaActivity extends AppCompatActivity {
         return Double.parseDouble(x);
     }
 
-    private static double calcSegundoGrado(double a, double b, double c) {
-        double res = (((-1) * b) + Math.sqrt((b * b) - 4 * ((a / 2)) * c)) / (a); //-1*a
-        double res2 = (((-1) * b) - Math.sqrt((b * b) - 4 * ((a / 2)) * c)) / (a); //-1*a
-
-        return res;
-
-        //TODO ACABAR ESTO AQUÍ Y EN FREEFALL
-    }
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +47,7 @@ public class FisicaActivity extends AppCompatActivity {
         final ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
 
         //afegir les tabs per anar als diferents fragments
-        adapter.addFragment(new FragmentCaidaLibre(), getString(R.string.freeFall));
+        adapter.addFragment(new FragmentCaidaLibre(), getString(R.string.mrua));
         adapter.addFragment(new FragmentMru(), getString(R.string.mru));
         adapter.addFragment(new FragmentMcu(), getString(R.string.mcu));
         viewPager.setAdapter(adapter);
@@ -99,7 +89,6 @@ public class FisicaActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        //TODO AÑADIR ESTO EN LOS OTROS
         switch (item.getItemId()) {
             case R.id.info_menu:
                 String url = "https://github.com/jafeth12/TreballdeRecerca";

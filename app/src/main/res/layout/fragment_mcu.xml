@@ -4,19 +4,308 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="mcu"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="monospace"
+                android:text="ω = Δφ/Δt"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/fisicaMCU1_inputW"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/fisicaMCU1_valueW"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="ω" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/fisicaMCU1_inputPhi"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="85dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/fisicaMCU1_valuePhi"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Δφ" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/fisicaMCU1_inputT"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="160dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/fisicaMCU1_valueT"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Δt" />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <Button
+                    android:id="@+id/fisicaMCU1_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="225dp"
+                    android:text="@string/calc" />
+
+                <TextView
+                    android:id="@+id/fisicaMCU1_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="230dp"
+                    android:layout_marginStart="190dp"
+                    android:text="res"
+                    android:textSize="24sp"/>
+
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="monospace"
+                android:text="φ = φ0 + ω(t-t0)"
+                android:textAlignment="viewStart"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/fisicaMCU_inputPhi"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/fisicaMCU_valuePhi"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="φ" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/fisicaMCU_inputPhi0"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="85dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/fisicaMCU_valuePhi0"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="φ0" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/fisicaMCU_inputW"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="160dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/fisicaMCU_valueW"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="ω" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/fisicaMCU_inputT1"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="235dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/fisicaMCU_valueT1"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="t1" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/fisicaMCU_inputT0"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="310dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/fisicaMCU_valueT0"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="t0"
+                        android:text="0"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/fisicaMCU_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="375dp"
+                    android:text="@string/calc" />
+
+                <TextView
+                    android:id="@+id/fisicaMCU_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="380dp"
+                    android:layout_marginStart="190dp"
+                    android:text="res"
+                    android:textSize="24sp"/>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="monospace"
+                android:text="s = φ * R"
+                android:textAlignment="viewStart"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/fisicaMCU2_inputS"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/fisicaMCU2_valueS"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="s" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="85dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/fisicaMCU2_valuePhi"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="φ (rad)" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="160dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/fisicaMCU2_valueR"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="R" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/fisicaMCU2_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="225dp"
+                    android:text="@string/calc" />
+
+                <TextView
+                    android:id="@+id/fisicaMCU2_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="230dp"
+                    android:layout_marginStart="190dp"
+                    android:text="res"
+                    android:textSize="24sp"/>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

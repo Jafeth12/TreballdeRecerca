@@ -1,25 +1,78 @@
 <resources>
-    <string name="app_name">Problem Solver</string>
-    <string name="appTitle" translatable="false">Problem solver</string>
-    <string name="fisica">Física</string>
-    <string name="mates">Matemáticas</string>
-    <string name="tecno">Tecnología</string>
-    <string name="about">Sobre mí</string>
-    <string name="helpHow">Deja en blanco la incógnita</string>
-    <string name="help">Ayuda</string>
-    <string name="freeFall">Caída libre</string>
-    <string name="mru" translatable="false">MRU</string>
-    <string name="mcu" translatable="false">MCU</string>
-    <string name="y0">Altura inicial (y0)</string>
-    <string name="y1">Altura final (y1)</string>
-    <string name="v0">Velocidad inicial (v0)</string>
-    <string name="t">Tiempo (t)</string>
-    <string name="g">Gravedad (g)</string>
-    <string name="calc">Calcular</string>
-    <string name="noNegative">No puede ser negativo!</string>
-    <string name="x0">Posición inicial (x0)</string>
-    <string name="x1">Posición final (x1)</string>
-    <string name="tNo">t no es posible</string>
-    <string name="vNo">v no es posible</string>
-    <string name="defaultG" translatable="false">-9.8</string>
+//**************************************************************************************************
+    //APP
+        <string name="app_name">Problem Solver</string>
+        <string name="appTitle" translatable="false">Problem solver</string>
+        <string name="fisica">Física</string>
+        <string name="mates">Matemáticas</string>
+        <string name="tecno">Tecnología</string>
+        <string name="about">Sobre mí</string>
+
+    //BOTONES | TABS
+        <string name="help">Ayuda</string>
+        <string name="freeFall">Caída libre</string>
+        <string name="calc">Calcular</string>
+
+        <string name="mrua" translatable="false">MRUA</string>
+        <string name="mru" translatable="false">MRU</string>
+        <string name="mcu" translatable="false">MCU</string>
+
+    //IRRELEVANTES
+        <string name="tNo">t no es posible</string>
+        <string name="vNo">v no es posible</string>
+        <string name="defaultG" translatable="false">-9.8</string>
+
+//**************************************************************************************************
+    //FÓRMULAS
+
+        //EN EJE X
+            <string name="v2Formula" translatable="false">v = v0² + 2a(x-x0)</string>
+            <string name="mruaFormula" translatable="false">x = x0 + v*t + a/2*Δt²</string>
+            <string name="v1Formula" translatable="false">v = v0 + a(t-t0)</string>
+
+        //EN EJE Y
+            <string name="freeFallFormula" translatable="false">y = y0 + v*t + (-g)/2*Δt²</string>
+            <string name="v1GFormula" translatable="false">v = v0 - g(t-t0)</string>
+            <string name="v2GFormula" translatable="false">v = v0² - 2g(y-y0)</string>
+
+        //MCU
+            <string name="wFormula" translatable="false">ω = Δφ/Δt </string>
+            <string name="phiFormula" translatable="false">φ = φ0 + ω(t-t0)</string>
+            <string name="seccFormula" translatable="false">S = φ * R</string>
+
+//**************************************************************************************************
+    //VARIABLES
+
+        //EN EJE X
+            <string name="x0">Posición inicial (x0)</string>
+            <string name="x1">Posición final (x1)</string>
+            <string name="v">Velocidad (v)</string>
+            <string name="v0">Velocidad inicial (v0)</string>
+
+        //EN EJE Y
+            <string name="a">Aceleración (a)</string>
+            <string name="g">Gravedad (g)</string>
+            <string name="y0">Altura inicial (y0)</string>
+            <string name="y1">Altura final (y1)</string>
+
+        //INDIFERENTES
+            <string name="t1">Tiempo final (t1)</string>
+            <string name="t0">Tiempo inicial (t0)</string>
+            <string name="t">Tiempo (Δt)</string>
+
+        //MCU
+            <string name="w">Vel. angular (ω)</string>
+            <string name="phi">Phi (rad) (φ)</string>
+            <string name="phi0">Phi final (rad) (φ)</string>
+            <string name="sección">Sección (S)</string>
+            <string name="R">Radio (R)</string>
+
+
+//**************************************************************************************************
+    //TOASTS
+        <string name="helpHow">Deja en blanco la incógnita que quieras saber</string>
+        <string name="noNegative">No puede ser negativo!</string>
+
+
+
 </resources>
