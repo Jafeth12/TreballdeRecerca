@@ -28,4 +28,5 @@
     <string name="R">Radi (R)</string>
     <string name="w">Vel. angular (ω)</string>
     <string name="phi0">Phi final (rad) (φ)</string>
+    <string name="and">i</string>
 </resources>

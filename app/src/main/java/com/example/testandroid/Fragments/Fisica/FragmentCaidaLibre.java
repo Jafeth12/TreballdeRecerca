@@ -45,6 +45,8 @@ public class FragmentCaidaLibre extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         Button btn = getView().findViewById(R.id.fisicaFF_btn);
+        Button btn1 = getView().findViewById(R.id.fisicaFF_btn1);
+        Button btn2 = getView().findViewById(R.id.fisicaFF_btn2);
         Switch switchFF = getView().findViewById(R.id.switchFF);
         final TextView textView = getView().findViewById(R.id.fisicaFF_result);
         final TextView textView1 = getView().findViewById(R.id.fisicaFFV1_result);
@@ -152,7 +154,7 @@ public class FragmentCaidaLibre extends Fragment {
                         double y1 = parse(valueY1);
                         double y0 = parse(valueY0);
                         double g = parse(valueG);
-                        double res = Math.sqrt((y0-y1)/((g/2)*-1));
+                        double res = Math.sqrt((2*(y1-y0))/g);
                         if (Double.isNaN(res)) {
                             textView.setText(R.string.tNo);
                         } else {
@@ -170,9 +172,9 @@ public class FragmentCaidaLibre extends Fragment {
                         // el número pequeño sea igual que el grande para que sea exacto.
 
                         double res = ((-1*v0)+Math.sqrt((o)))/(g);
-                        if (res < 0) {
+                        if (res <= 0) {
                             double res2 = ((-1*v0)-Math.sqrt((o)))/(g);
-                            textView.setText("t = " + String.format("%.2f", res2) + "s");
+                            textView.setText("t = " + String.format("%.2f", res2) + "s " + R.string.and + String.format("%.2f", res) + "s");
                         } else if (Double.isNaN(res)) {
                             textView.setText(R.string.tNo);
                         } else {
@@ -185,51 +187,38 @@ public class FragmentCaidaLibre extends Fragment {
                         double v0 = parse(valueV0);
                         double y1y0 = y0-y1;
 
-                        //y1y0 es porque, obviamente, no se puede empezar a una altura, y luego subir si el cuadrado de la velocidad no es más grande que y1y0.
-                        //porque daría negativo en la raíz cuadrada de la fórmula cuadrática.
-                        if (y1y0 < 0) {
-                            textView.setText(R.string.tNo);
-                        }
-                        double res = ((-1*v0)+Math.sqrt((v0*v0)-4*(((g/2))*(y1y0))))/(g);
-                        if (res < 0) {
+                        double res = ((-1*v0)+Math.sqrt((v0*v0)-4*(((g/2))*(y0-y1))))/(g);
+                        if (res <= 0) {
                             double res2 = ((-1*v0)-Math.sqrt((v0*v0)-4*(((g/2))*(y1y0))))/(g);
-                            textView.setText("t = " + String.format("%.2f", res2) + "s");
+                            textView.setText("t = " + String.format("%.2f", res2) + "s " + R.string.and + String.format("%.2f", res) + "s");
                         } else if (Double.isNaN(res)) {
                             textView.setText(R.string.tNo);
                         } else {
                             textView.setText("t = " + String.format("%.2f", res) + "s");
                         }
                     }
-                }
-
-                if (valueV0.equals("")) {
+                } else if (valueV0.equals("")) {
                     double y1 = parse(valueY1);
                     double y0 = parse(valueY0);
                     double t = parse(valueT);
                     double g = parse(valueG);
                     double res = ((y1-y0)+((g/2)*-1)*(t*t))/t;
                     textView.setText("v0 = " + String.format("%.2f", res) + "m/s");
-                }
-
-                if (valueG.equals("")) {
+                } else if (valueG.equals("")) {
                     double y1 = parse(valueY1);
                     double y0 = parse(valueY0);
                     double t = parse(valueT);
                     double v0 = parse(valueV0);
                     double res = ((y0-y1)+(v0*t))/t;
                     textView.setText("g = " + String.format("%.2f", res) + "m/s^2");
-                }
-
-                if (valueY0.equals("")) {
+                } else if (valueY0.equals("")) {
                     double y1 = parse(valueY1);
                     double t = parse(valueT);
                     double v0 = parse(valueV0);
                     double g = parse(valueG);
                     double res = y1+(((g/2)*-1)*(t*t))-v0*t;
                     textView.setText("y0 = " + String.format("%.2f", res) + "m");
-                }
-
-                if (valueY1.equals("")) {
+                } else if(valueY1.equals("")) {
                     double y0 = parse(valueY0);
                     double v0 = parse(valueV0);
                     double t = parse(valueT);
@@ -241,6 +230,20 @@ public class FragmentCaidaLibre extends Fragment {
             }
         });
 
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
     }
 

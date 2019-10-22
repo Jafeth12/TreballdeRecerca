@@ -21,6 +21,7 @@
         <string name="tNo">t no es posible</string>
         <string name="vNo">v no es posible</string>
         <string name="defaultG" translatable="false">-9.8</string>
+        <string name="and">y</string>
 
 //**************************************************************************************************
     //FÓRMULAS
@@ -31,7 +32,7 @@
             <string name="v1Formula" translatable="false">v = v0 + a(t-t0)</string>
 
         //EN EJE Y
-            <string name="freeFallFormula" translatable="false">y = y0 + v*t + (-g)/2*Δt²</string>
+            <string name="freeFallFormula" translatable="false">y = y0 + v*t - g/2*Δt²</string>
             <string name="v1GFormula" translatable="false">v = v0 - g(t-t0)</string>
             <string name="v2GFormula" translatable="false">v = v0² - 2g(y-y0)</string>
 
