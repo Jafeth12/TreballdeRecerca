@@ -48,7 +48,7 @@
                         android:inputType="numberDecimal|numberSigned"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="ω" />
+                        android:hint="@string/w" />
                 </android.support.design.widget.TextInputLayout>
 
 
@@ -64,7 +64,7 @@
                         android:inputType="numberDecimal|numberSigned"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="Δφ" />
+                        android:hint="@string/deltaPhi" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -79,7 +79,7 @@
                         android:inputType="numberDecimal|numberSigned"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="Δt" />
+                        android:hint="@string/t" />
                 </android.support.design.widget.TextInputLayout>
 
 
@@ -97,7 +97,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="230dp"
                     android:layout_marginStart="190dp"
-                    android:text="res"
                     android:textSize="24sp"/>
 
 
@@ -133,7 +132,7 @@
                         android:inputType="numberDecimal|numberSigned"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="φ" />
+                        android:hint="@string/phi" />
                 </android.support.design.widget.TextInputLayout>
 
 
@@ -149,7 +148,7 @@
                         android:inputType="numberDecimal|numberSigned"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="φ0" />
+                        android:hint="@string/phi0" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -164,7 +163,7 @@
                         android:inputType="numberDecimal|numberSigned"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="ω" />
+                        android:hint="@string/w" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -180,7 +179,7 @@
                         android:inputType="numberDecimal|numberSigned"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="t1" />
+                        android:hint="@string/t1" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -196,7 +195,7 @@
                         android:inputType="numberDecimal|numberSigned"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="t0"
+                        android:hint="@string/t0"
                         android:text="0"/>
                 </android.support.design.widget.TextInputLayout>
 
@@ -214,7 +213,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="380dp"
                     android:layout_marginStart="190dp"
-                    android:text="res"
                     android:textSize="24sp"/>
             </android.support.v7.widget.CardView>
 
@@ -249,7 +247,7 @@
                         android:inputType="numberDecimal|numberSigned"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="s" />
+                        android:hint="@string/sección" />
                 </android.support.design.widget.TextInputLayout>
 
 
@@ -264,7 +262,7 @@
                         android:inputType="numberDecimal|numberSigned"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="φ (rad)" />
+                        android:hint="@string/phi" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -278,7 +276,7 @@
                         android:inputType="numberDecimal|numberSigned"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="R" />
+                        android:hint="@string/R" />
                 </android.support.design.widget.TextInputLayout>
 
                 <Button
@@ -294,7 +292,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="230dp"
                     android:layout_marginStart="190dp"
-                    android:text="res"
                     android:textSize="24sp"/>
 
             </android.support.v7.widget.CardView>

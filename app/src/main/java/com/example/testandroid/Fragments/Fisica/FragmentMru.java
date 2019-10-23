@@ -48,6 +48,7 @@ public class FragmentMru extends Fragment {
                 String valueX = x1.getText().toString();
                 String valueV = v1.getText().toString();
                 String valueT = t1.getText().toString();
+                double x, v, t, res;
 
                 if (valueX.isEmpty()) {
                     if (valueV.isEmpty() | valueT.isEmpty()) {
@@ -65,23 +66,23 @@ public class FragmentMru extends Fragment {
 
 
                 if (valueX.equals("")) {
-                    double t = parse(valueT);
-                    double v = parse(valueV);
-                    double res = ras.calcXMRU(v, t);
+                    t = parse(valueT);
+                    v = parse(valueV);
+                    res = ras.calcXMRU(v, t);
                     textView.setText("x = " + String.format("%.2f", res) + "m");
                 } else if (valueT.equals("")) {
-                    double x = parse(valueX);
-                    double v = parse(valueV);
-                    double res = ras.calcTMRU(v, x);
+                    x = parse(valueX);
+                    v = parse(valueV);
+                    res = ras.calcTMRU(v, x);
                     if (Double.isNaN(res)) {
                         textView.setText(R.string.tNo);
                     } else {
                         textView.setText("t = " + String.format("%.2f", res) + "s");
                     }
                 } else if (valueV.equals("")) {
-                    double t = parse(valueT);
-                    double x = parse(valueX);
-                    double res = ras.calcVMRU(x, t);
+                    t = parse(valueT);
+                    x = parse(valueX);
+                    res = ras.calcVMRU(x, t);
                     if (Double.isNaN(res)) {
                         textView.setText(R.string.vNo);
                     } else {
@@ -106,6 +107,7 @@ public class FragmentMru extends Fragment {
                 String valueV = v1.getText().toString();
                 String valueT1 = t11.getText().toString();
                 String valueT0 = t01.getText().toString();
+                double x1, x0, v, t1, t0, res;
 
                 if (valueT1.isEmpty()) {
                     if (valueV.isEmpty() | valueX0.isEmpty() | valueX1.isEmpty() | valueT0.isEmpty()) {
@@ -137,47 +139,47 @@ public class FragmentMru extends Fragment {
 
 
                 if (valueX1.equals("")) {
-                    double x0 = parse(valueX0);
-                    double v = parse(valueV);
-                    double t1 = parse(valueT1);
-                    double t0 = parse(valueT0);
-                    double res = ras.calcX1(x0, v, t1, t0);
+                    x0 = parse(valueX0);
+                    v = parse(valueV);
+                    t1 = parse(valueT1);
+                    t0 = parse(valueT0);
+                    res = ras.calcX1(x0, v, t1, t0);
                     textView.setText("x1 = " + String.format("%.2f", res) + "m");
                 } else if (valueT1.equals("")) {
-                    double x0 = parse(valueX0);
-                    double x1 = parse(valueX1);
-                    double v = parse(valueV);
-                    double t0 = parse(valueT0);
-                    double res = ras.calcT1(x1, x0, v, t0);
+                    x0 = parse(valueX0);
+                    x1 = parse(valueX1);
+                    v = parse(valueV);
+                    t0 = parse(valueT0);
+                    res = ras.calcT1(x1, x0, v, t0);
                     if (Double.isNaN(res) || res < 0) {
                         textView.setText(R.string.tNo);
                     } else {
                         textView.setText("t = " + String.format("%.2f", res) + "s");
                     }
                 } else if (valueV.equals("")) {
-                    double x0 = parse(valueX0);
-                    double x1 = parse(valueX1);
-                    double t1 = parse(valueT1);
-                    double t0 = parse(valueT0);
-                    double res = ras.calcV(x1, x0, t1, t0);
+                    x0 = parse(valueX0);
+                    x1 = parse(valueX1);
+                    t1 = parse(valueT1);
+                    t0 = parse(valueT0);
+                    res = ras.calcV(x1, x0, t1, t0);
                     if (Double.isNaN(res)) {
                         textView.setText(R.string.vNo);
                     } else {
                         textView.setText("v = " + String.format("%.2f", res) + "m/s");
                     }
                 } else if (valueX0.equals("")) {
-                    double v = parse(valueV);
-                    double x1 = parse(valueX1);
-                    double t1 = parse(valueT1);
-                    double t0 = parse(valueT0);
-                    double res = ras.calcX0(x1, v, t1, t0);
+                    v = parse(valueV);
+                    x1 = parse(valueX1);
+                    t1 = parse(valueT1);
+                    t0 = parse(valueT0);
+                    res = ras.calcX0(x1, v, t1, t0);
                     textView.setText("x0 = " + String.format("%.2f", res) + "m");
                 } else if (valueT0.equals("")) {
-                    double v = parse(valueV);
-                    double x1 = parse(valueX1);
-                    double x0 = parse(valueX0);
-                    double t1 = parse(valueT1);
-                    double res = ras.calcT0(x1, x0, v, t1);
+                    v = parse(valueV);
+                    x1 = parse(valueX1);
+                    x0 = parse(valueX0);
+                    t1 = parse(valueT1);
+                    res = ras.calcT0(x1, x0, v, t1);
                     if (Double.isNaN(res) || res < 0) {
                         textView.setText(R.string.tNo);
                     } else {

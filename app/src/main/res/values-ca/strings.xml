@@ -29,4 +29,10 @@
     <string name="w">Vel. angular (ω)</string>
     <string name="phi0">Phi final (rad) (φ)</string>
     <string name="and">i</string>
+    <string name="d">Distància (x)</string>
+    <string name="deltaPhi">Phi (rad) (Δφ)</string>
+    <string name="xNo">x no és possible</string>
+    <string name="noEs">" no és possible"</string>
+    <string name="v0No">v0 no és possible</string>
+    <string name="wNo">ω no és possible</string>
 </resources>

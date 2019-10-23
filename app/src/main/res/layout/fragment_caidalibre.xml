@@ -149,7 +149,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="380dp"
                     android:layout_marginStart="190dp"
-                    android:text="res"
                     android:textSize="24sp"
                     tools:text="result" />
 
@@ -183,6 +182,7 @@
                     app:errorEnabled="true">
 
                     <EditText
+                        android:id="@+id/fisicaFFV1_valueV"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="numberDecimal|numberSigned"
@@ -198,6 +198,7 @@
                     app:errorEnabled="true">
 
                     <EditText
+                        android:id="@+id/fisicaFFV1_valueV0"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="numberDecimal|numberSigned"
@@ -230,6 +231,7 @@
                     app:errorEnabled="true">
 
                     <EditText
+                        android:id="@+id/fisicaFFV1_valueT"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="numberDecimal|numberSigned"
@@ -245,10 +247,12 @@
                     app:errorEnabled="true">
 
                     <EditText
+                        android:id="@+id/fisicaFFV1_valueT0"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="numberDecimal|numberSigned"
-                        android:hint="@string/t0"/>
+                        android:hint="@string/t0"
+                        android:text="0"/>
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -266,7 +270,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="380dp"
                     android:layout_marginStart="190dp"
-                    android:text="res"
                     android:textSize="24sp"
                     tools:text="result"/>
 
@@ -302,6 +305,7 @@
                     app:errorEnabled="true">
 
                     <EditText
+                        android:id="@+id/fisicaFFV2_valueV"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="numberDecimal|numberSigned"
@@ -317,6 +321,7 @@
                     app:errorEnabled="true">
 
                     <EditText
+                        android:id="@+id/fisicaFFV2_valueV0"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="numberDecimal|numberSigned"
@@ -371,7 +376,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="numberDecimal|numberSigned"
-                        android:hint="@string/x0"/>
+                        android:hint="@string/x0"
+                        android:text="0"/>
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -389,7 +395,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="380dp"
                     android:layout_marginStart="190dp"
-                    android:text="res"
                     android:textSize="24sp"
                     tools:text="result"/>
 

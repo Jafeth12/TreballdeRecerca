@@ -18,10 +18,15 @@
         <string name="mcu" translatable="false">MCU</string>
 
     //IRRELEVANTES
-        <string name="tNo">t no es posible</string>
-        <string name="vNo">v no es posible</string>
         <string name="defaultG" translatable="false">-9.8</string>
         <string name="and">y</string>
+        <string name="y" translatable="false">y</string>
+
+        <string name="metros" translatable="false">m</string>
+        <string name="metrosEntreSegundo" translatable="false">m/s</string>
+        <string name="metrosEntreSegundoCuadrado" translatable="false">m/s²</string>
+        <string name="segundos" translatable="false">s</string>
+
 
 //**************************************************************************************************
     //FÓRMULAS
@@ -49,6 +54,7 @@
             <string name="x1">Posición final (x1)</string>
             <string name="v">Velocidad (v)</string>
             <string name="v0">Velocidad inicial (v0)</string>
+            <string name="d">Distancia (Δx)</string>
 
         //EN EJE Y
             <string name="a">Aceleración (a)</string>
@@ -67,6 +73,7 @@
             <string name="phi0">Phi final (rad) (φ)</string>
             <string name="sección">Sección (S)</string>
             <string name="R">Radio (R)</string>
+            <string name="deltaPhi">Phi (rad) (Δφ)</string>
 
 
 //**************************************************************************************************
@@ -75,5 +82,12 @@
         <string name="noNegative">No puede ser negativo!</string>
 
 
+    //NO EXISTE
+    <string name="tNo">t no es posible</string>
+    <string name="vNo">v no es posible</string>
+    <string name="wNo">ω no es posible</string>
+    <string name="v0No">v0 no es posible</string>
+    <string name="xNo">x no es posible</string>
+    <string name="noEs"> no es posible</string>
 
 </resources>

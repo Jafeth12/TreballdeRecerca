@@ -49,6 +49,7 @@ public class FragmentMcu extends Fragment {
                 String valueW = w1.getText().toString();
                 String valuePhi = phi1.getText().toString();
                 String valueT = t1.getText().toString();
+                double phi, t, w, res;
 
                 if (valueW.isEmpty()) {
                     if (valuePhi.isEmpty() | valueT.isEmpty()) {
@@ -66,23 +67,23 @@ public class FragmentMcu extends Fragment {
 
 
                 if (valueW.equals("")) {
-                    double phi = parse(valuePhi);
-                    double t = parse(valueT);
-                    double res = ras.calcVMRU(phi, t);
+                    phi = parse(valuePhi);
+                    t = parse(valueT);
+                    res = ras.calcVMRU(phi, t);
                     if (Double.isNaN(res)) {
-                        textView1.setText("ω no existe");
+                        textView1.setText(R.string.wNo);
                     } else {
                         textView1.setText("ω = " + String.format("%.2f", res) + "rad/s");
                     }
                 } else if (valuePhi.equals("")) {
-                    double t = parse(valueT);
-                    double w = parse(valueW);
-                    double res = ras.calcXMRU(w, t);
+                    t = parse(valueT);
+                    w = parse(valueW);
+                    res = ras.calcXMRU(w, t);
                     textView1.setText("φ = " + String.format("%.2f", res) + "rad");
                 } else if (valueT.equals("")) {
-                    double w = parse(valueW);
-                    double phi = parse(valuePhi);
-                    double res = ras.calcTMRU(w, phi);
+                    w = parse(valueW);
+                    phi = parse(valuePhi);
+                    res = ras.calcTMRU(w, phi);
                     if (Double.isNaN(res)) {
                         textView1.setText(R.string.tNo);
                     } else {
@@ -103,6 +104,7 @@ public class FragmentMcu extends Fragment {
                 String valueS = s1.getText().toString();
                 String valuePhi = phi1.getText().toString();
                 String valueR = r1.getText().toString();
+                double phi, r, res, s;
 
                 if (valuePhi.isEmpty()) {
                     if (valueR.isEmpty() | valueS.isEmpty()) {
@@ -119,19 +121,19 @@ public class FragmentMcu extends Fragment {
                 }
 
                 if (valueS.equals("")) {
-                    double phi = parse(valuePhi);
-                    double r = parse(valueR);
-                    double res = ras.calcSecc(phi, r);
+                    phi = parse(valuePhi);
+                    r = parse(valueR);
+                    res = ras.calcSecc(phi, r);
                     textView2.setText("S = " + String.format("%.2f", res) + "m");
                 } else if (valuePhi.equals("")) {
-                    double r = parse(valueR);
-                    double s = parse(valueS);
-                    double res = ras.calcSeccPhi(s, r);
+                    r = parse(valueR);
+                    s = parse(valueS);
+                    res = ras.calcSeccPhi(s, r);
                     textView2.setText("φ = " + String.format("%.2f", res) + "rad");
                 } else if (valueR.equals("")) {
-                    double phi = parse(valuePhi);
-                    double s = parse(valueS);
-                    double res = ras.calcSeccR(phi, s);
+                    phi = parse(valuePhi);
+                    s = parse(valueS);
+                    res = ras.calcSeccR(phi, s);
                     textView2.setText("R = " + String.format("%.2f", res) + "m");
                 }
             }
@@ -151,6 +153,7 @@ public class FragmentMcu extends Fragment {
                 String valuePhi0 = phi01.getText().toString();
                 String valueT1 = t11.getText().toString();
                 String valueW = w1.getText().toString();
+                double t0, t1, phi, phi0, w, res;
 
                 if (valueT0.isEmpty()) {
                     if (valuePhi.isEmpty() | valuePhi0.isEmpty() | valueT1.isEmpty() | valueW.isEmpty()) {
@@ -181,47 +184,47 @@ public class FragmentMcu extends Fragment {
                 }
 
                 if (valuePhi.equals("")) {
-                    double phi0 = parse(valuePhi0);
-                    double w = parse(valueW);
-                    double t1 = parse(valueT1);
-                    double t0 = parse(valueT0);
-                    double res = ras.calcX1(phi0, w, t1, t0);
-                    textView.setText("x1 = " + String.format("%.2f", res) + "m");
+                    phi0 = parse(valuePhi0);
+                    w = parse(valueW);
+                    t1 = parse(valueT1);
+                    t0 = parse(valueT0);
+                    res = ras.calcX1(phi0, w, t1, t0);
+                    textView.setText("φ = " + String.format("%.2f", res) + "rad");
                 } else if (valueT1.equals("")) {
-                    double phi0 = parse(valuePhi0);
-                    double phi = parse(valuePhi);
-                    double w = parse(valueW);
-                    double t0 = parse(valueT0);
-                    double res = ras.calcT1(phi, phi0, w, t0);
+                    phi0 = parse(valuePhi0);
+                    phi = parse(valuePhi);
+                    w = parse(valueW);
+                    t0 = parse(valueT0);
+                    res = ras.calcT1(phi, phi0, w, t0);
                     if (Double.isNaN(res) || res < 0) {
                         textView.setText(R.string.tNo);
                     } else {
                         textView.setText("t = " + String.format("%.2f", res) + "s");
                     }
                 } else if (valueW.equals("")) {
-                    double phi0 = parse(valuePhi0);
-                    double phi = parse(valuePhi);
-                    double t1 = parse(valueT1);
-                    double t0 = parse(valueT0);
-                    double res = ras.calcV(phi, phi0, t1, t0);
+                    phi0 = parse(valuePhi0);
+                    phi = parse(valuePhi);
+                    t1 = parse(valueT1);
+                    t0 = parse(valueT0);
+                    res = ras.calcV(phi, phi0, t1, t0);
                     if (Double.isNaN(res)) {
-                        textView.setText(R.string.vNo);
+                        textView.setText(R.string.wNo);
                     } else {
-                        textView.setText("v = " + String.format("%.2f", res) + "m/s");
+                        textView.setText("ω = " + String.format("%.2f", res) + "rad/s");
                     }
                 } else if (valuePhi0.equals("")) {
-                    double w = parse(valueW);
-                    double phi = parse(valuePhi);
-                    double t1 = parse(valueT1);
-                    double t0 = parse(valueT0);
-                    double res = ras.calcX0(phi, w, t1, t0);
-                    textView.setText("x0 = " + String.format("%.2f", res) + "m");
+                    w = parse(valueW);
+                    phi = parse(valuePhi);
+                    t1 = parse(valueT1);
+                    t0 = parse(valueT0);
+                    res = ras.calcX0(phi, w, t1, t0);
+                    textView.setText("φ0 = " + String.format("%.2f", res) + "rad");
                 } else if (valueT0.equals("")) {
-                    double w = parse(valueW);
-                    double phi = parse(valuePhi);
-                    double phi0 = parse(valuePhi0);
-                    double t1 = parse(valueT1);
-                    double res = ras.calcT0(phi, phi0, w, t1);
+                    w = parse(valueW);
+                    phi = parse(valuePhi);
+                    phi0 = parse(valuePhi0);
+                    t1 = parse(valueT1);
+                    res = ras.calcT0(phi, phi0, w, t1);
                     if (Double.isNaN(res) || res < 0) {
                         textView.setText(R.string.tNo);
                     } else {
