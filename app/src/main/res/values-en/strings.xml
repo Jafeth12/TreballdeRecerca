@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Problem Solver</string>
+    <string name="DM">Major diagonal (D)</string>
+    <string name="R">Radius (R)</string>
+    <string name="a">Acceleration</string>
+    <string name="about">About me</string>
+    <string name="alpha">α (degrees)</string>
+    <string name="altura">Height (h)</string>
+    <string name="and">and</string>
+    <string name="angulo">Angle (degrees)</string>
+    <string name="area">Area (a)</string>
+    <string name="areas">Areas</string>
+    <string name="base">Base (b)</string>
+    <string name="beta">β (degrees)</string>
+    <string name="calc">Calculate</string>
+    <string name="cirArea">Circle: a = π*r²</string>
+    <string name="cuadradoArea">Square: a = b*h</string>
+    <string name="d">Distance(Δx)</string>
+    <string name="deltaPhi">Phi (rad) (Δφ)</string>
+    <string name="distancia">Distance (d)</string>
+    <string name="dm">Minor diagonal (d)</string>
+    <string name="eCinetica">Kinetic e. (Ke)</string>
+    <string name="ePotencial">Potential e. (Pe)</string>
+    <string name="ecFormula">Ke = 1/2(m*v²)</string>
+    <string name="elec">Electricity</string>
+    <string name="energia">Energy</string>
+    <string name="epFormula">Pe = m*g*h</string>
+    <string name="fisica">Physics</string>
+    <string name="freeFall">Free fall</string>
+    <string name="fuerza">Force (F)</string>
+    <string name="g">Gravity (g)</string>
+    <string name="help">Help</string>
+    <string name="helpHow">Leave blank what you want to know</string>
+    <string name="intensidad">Intensity (I)</string>
+    <string name="masa">Mass (kg)</string>
+    <string name="mates">Math</string>
+    <string name="mcu">UCM</string>
+    <string name="mru">RUM</string>
+    <string name="mrua">UALM</string>
+    <string name="noEs">" it's not possible"</string>
+    <string name="noNegative">Can\'t be negative!</string>
+    <string name="phi">Phi (rad) (φ)</string>
+    <string name="phi0">Final phi (rad) (φ)</string>
+    <string name="potencia">Power (P)</string>
+    <string name="radio">Radius (R)</string>
+    <string name="resistencia">Resistance</string>
+    <string name="resta">Substraction</string>
+    <string name="romboArea">Rhombus: a = (D*d)/2</string>
+    <string name="sección">Section (S)</string>
+    <string name="suma">Sum</string>
+    <string name="t">Time (t)</string>
+    <string name="t0">Initial time (t0)</string>
+    <string name="t1">Final time (t1)</string>
+    <string name="tNo">t is not possible</string>
+    <string name="tecno">Tecnology</string>
+    <string name="triArea">Triangle: a = (b*h)/2</string>
+    <string name="trigo">Trigonometry</string>
+    <string name="v">Velocity (v)</string>
+    <string name="v0">Initial velocity (v0)</string>
+    <string name="v0No">v0 is not possible</string>
+    <string name="vNo">v is not possible</string>
+    <string name="voltage">Voltage</string>
+    <string name="w">Angular vel. (ω)</string>
+    <string name="wNo">ω is not possible</string>
+    <string name="x0">Initial position (x0)</string>
+    <string name="x1">Final position (x1)</string>
+    <string name="xNo">x is not possible</string>
+    <string name="y0">Initial height (y0)</string>
+    <string name="y1">Final height (y1)</string>
+    <string name="propertiesAngulo">Angle properties</string>
+    <string name="leyOhm">Ohm\'s law: V = I*R</string>
+    <string name="potenciaElec">Electric power: P = V*I</string>
+    <string name="soloIncognita">No more than one  unknown variable</string>
+    <string name="unaIncognita">Fill the blanks</string>
+    <string name="ec">Ke</string>
+    <string name="ep">Pe</string>
+    <string name="helpHowLlenar">Fill every blank to know the result</string>
+</resources>

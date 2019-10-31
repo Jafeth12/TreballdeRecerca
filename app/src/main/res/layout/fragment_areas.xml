@@ -14,7 +14,6 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,93 +25,10 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="5dp"
                 android:fontFamily="monospace"
-                android:text="v = Δx/Δt"
+                android:text="@string/triArea"
                 android:textAlignment="viewStart"
                 android:textSize="24sp"
                 android:textStyle="bold" />
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:cardUseCompatPadding="true"
-                app:contentPadding="10dp">
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/fisicaMRU1_inputV"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                    <EditText
-                        android:id="@+id/fisicaMRU1_valueV"
-                        android:inputType="numberDecimal|numberSigned"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="@string/v" />
-                </android.support.design.widget.TextInputLayout>
-
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/fisicaMRU1_inputX"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="85dp"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                    <EditText
-                        android:id="@+id/fisicaMRU1_valueX"
-                        android:inputType="numberDecimal|numberSigned"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="@string/d" />
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/fisicaMRU1_inputT"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="160dp"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                    <EditText
-                        android:id="@+id/fisicaMRU1_valueT"
-                        android:inputType="numberDecimal|numberSigned"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="@string/t" />
-                </android.support.design.widget.TextInputLayout>
-
-
-
-                <Button
-                    android:id="@+id/fisicaMRU1_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="225dp"
-                    android:text="@string/calc" />
-
-                <TextView
-                    android:id="@+id/fisicaMRU1_result"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="235dp"
-                    android:layout_marginStart="190dp"
-                    android:fontFamily="monospace"
-                    android:textSize="24sp"/>
-            </android.support.v7.widget.CardView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginStart="5dp"
-                android:fontFamily="monospace"
-                android:text="x1 = x0 + v(t-t0)"
-                android:textAlignment="viewStart"
-                android:textSize="24sp"
-                android:textStyle="bold"/>
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -122,109 +38,303 @@
                 app:cardUseCompatPadding="true"
                 app:contentPadding="10dp">
 
-
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/fisicaMRU_inputX1"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <EditText
-                        android:id="@+id/fisicaMRU_valueX1"
+                        android:id="@+id/matTri_valueA"
                         android:inputType="numberDecimal|numberSigned"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="@string/x1" />
+                        android:hint="@string/area" />
                 </android.support.design.widget.TextInputLayout>
 
-
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/fisicaMRU_inputX0"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="85dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <EditText
-                        android:id="@+id/fisicaMRU_valueX0"
+                        android:id="@+id/matTri_valueBase"
                         android:inputType="numberDecimal|numberSigned"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="@string/x0" />
+                        android:hint="@string/base" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/fisicaMRU_inputV"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="160dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <EditText
-                        android:id="@+id/fisicaMRU_valueV"
+                        android:id="@+id/matTri_valueAltura"
                         android:inputType="numberDecimal|numberSigned"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="@string/v" />
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/fisicaMRU_inputT1"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="235dp"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                    <EditText
-                        android:id="@+id/fisicaMRU_valueT1"
-                        android:inputType="numberDecimal|numberSigned"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="@string/t1" />
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/fisicaMRU_inputT0"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="310dp"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                    <EditText
-                        android:id="@+id/fisicaMRU_valueT0"
-                        android:inputType="numberDecimal|numberSigned"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="@string/t0"
-                        android:text="0"/>
+                        android:hint="@string/altura" />
                 </android.support.design.widget.TextInputLayout>
 
                 <Button
-                    android:id="@+id/fisicaMRU_btn"
+                    android:id="@+id/matTri_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="375dp"
-                    android:text="@string/calc" />
+                    android:layout_marginTop="225dp"
+                    android:text="@string/calc"/>
 
                 <TextView
-                    android:id="@+id/fisicaMRU_result"
+                    android:id="@+id/matTri_result"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="385dp"
-                    android:fontFamily="monospace"
+                    android:layout_marginTop="230dp"
                     android:layout_marginStart="190dp"
-                    android:textSize="24sp"/>
+                    android:fontFamily="monospace"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="10dp"/>
+
             </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="monospace"
+                android:text="@string/cuadradoArea"
+                android:textAlignment="viewStart"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/matCua_valueA"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/area" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="85dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/matCua_valueBase"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/base" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="160dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/matCua_valueAltura"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/altura" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/matCua_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="225dp"
+                    android:text="@string/calc"/>
+
+                <TextView
+                    android:id="@+id/matCua_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="230dp"
+                    android:layout_marginStart="190dp"
+                    android:fontFamily="monospace"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="10dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="monospace"
+                android:text="@string/cirArea"
+                android:textAlignment="viewStart"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/matCir_valueA"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/area" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="85dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/matCir_valueRadio"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/radio" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/matCir_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="150dp"
+                    android:text="@string/calc"/>
+
+                <TextView
+                    android:id="@+id/matCir_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="155dp"
+                    android:layout_marginStart="190dp"
+                    android:fontFamily="monospace"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="10dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="monospace"
+                android:text="@string/romboArea"
+                android:textAlignment="viewStart"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/matRomb_valueA"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/area" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="85dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/matRomb_valueDi"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/DM" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="160dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/matRomb_valuedi"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/dm" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/matRomb_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="225dp"
+                    android:text="@string/calc"/>
+
+                <TextView
+                    android:id="@+id/matRomb_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="230dp"
+                    android:layout_marginStart="190dp"
+                    android:fontFamily="monospace"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="10dp"/>
+
+            </android.support.v7.widget.CardView>
+
+
+
+
         </LinearLayout>
 
 
 
-
     </ScrollView>
-
-
-
-
 
 </android.support.constraint.ConstraintLayout>

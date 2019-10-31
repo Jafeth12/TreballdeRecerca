@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -14,6 +16,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
+
+import com.example.testandroid.Fragments.Mates.FragmentAreas;
+import com.example.testandroid.Fragments.Mates.FragmentTrigo;
 
 public class MatesActivity extends AppCompatActivity {
 
@@ -29,6 +34,35 @@ public class MatesActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle(getString(R.string.mates));
 
+        //declaració del tablayout
+        final TabLayout tabLayout = findViewById(R.id.tabLayoutMates);
+        final ViewPager viewPager = findViewById(R.id.viewPagerMates);
+        final ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
+
+        //afegir les tabs per anar als diferents fragments
+        adapter.addFragment(new FragmentTrigo(), getString(R.string.trigo));
+        adapter.addFragment(new FragmentAreas(), getString(R.string.areas));
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        //creació del botó per tornar al homepage
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +70,6 @@ public class MatesActivity extends AppCompatActivity {
                 finish();
             }
         });
-
 
 
     }
@@ -67,7 +100,7 @@ public class MatesActivity extends AppCompatActivity {
                 startActivity(i);
                 return true;
             case R.id.help_menu:
-                Toast.makeText(this, R.string.helpHow, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,R.string.helpHowLlenar, Toast.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

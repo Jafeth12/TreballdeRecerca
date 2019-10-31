@@ -37,7 +37,7 @@ public class FragmentMcu extends Fragment {
         final TextView textView = getView().findViewById(R.id.fisicaMCU_result);
         final TextView textView1 = getView().findViewById(R.id.fisicaMCU1_result);
         final TextView textView2 = getView().findViewById(R.id.fisicaMCU2_result);
-        final Toast soloIncognita = Toast.makeText(getActivity(),"No más de un incógnita",Toast.LENGTH_LONG);
+        final Toast soloIncognita = Toast.makeText(getActivity(),R.string.soloIncognita,Toast.LENGTH_LONG);
 
 
         btn2.setOnClickListener(new View.OnClickListener() {

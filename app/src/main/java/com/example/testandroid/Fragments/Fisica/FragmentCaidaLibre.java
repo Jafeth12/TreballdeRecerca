@@ -36,10 +36,6 @@ public class FragmentCaidaLibre extends Fragment {
         return Double.parseDouble(number);
     }
 
-    public void clear(EditText k) {
-        k.setText("");
-    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -51,11 +47,11 @@ public class FragmentCaidaLibre extends Fragment {
         Button btn = getView().findViewById(R.id.fisicaFF_btn);
         Button btn1 = getView().findViewById(R.id.fisicaFF_btn1);
         Button btn2 = getView().findViewById(R.id.fisicaFF_btn2);
-        Switch switchFF = getView().findViewById(R.id.switchFF);
+        final Switch switchFF = getView().findViewById(R.id.switchFF);
         final TextView textView = getView().findViewById(R.id.fisicaFF_result);
         final TextView textView1 = getView().findViewById(R.id.fisicaFFV1_result);
         final TextView textView2 = getView().findViewById(R.id.fisicaFFV2_result);
-        final Toast soloIncognita = Toast.makeText(getActivity(),"No más de un incógnita",Toast.LENGTH_LONG);
+        final Toast soloIncognita = Toast.makeText(getActivity(),R.string.soloIncognita,Toast.LENGTH_LONG);
         gORa = "a";
         y1ORx1 = "x1";
         y0ORx0 = "x0";
@@ -189,8 +185,6 @@ public class FragmentCaidaLibre extends Fragment {
                         if (o < 0 && o > -0.3) {
                             o = 0;
                         }
-                        //o es porque hay veces que la gente no pone el número exacto para que (b^2)-4ac dé 0, así que si el resultado de eso da entre 0 y -0.5, hago que
-                        // el número pequeño sea igual que el grande para que sea exacto.
 
                         res = ((-1*v0)+Math.sqrt((o)))/(g);
                         if (res <= 0) {
@@ -429,7 +423,7 @@ public class FragmentCaidaLibre extends Fragment {
                     v = parse(valueV);
                     res = ras2.calcA(v, v0, x1, x0);
                     if (Double.isNaN(res)) {
-                        textView2.setText(gORa + "no existe");
+                        textView2.setText(gORa + R.string.noEs);
                     } else {
                         textView2.setText(gORa + " = " + String.format("%.2f", res) + "m");
                     }

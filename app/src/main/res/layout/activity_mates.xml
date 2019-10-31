@@ -17,4 +17,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayoutMates"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="4dp"
+        android:background="@color/colorSecondary"
+        app:tabIndicatorColor="@color/white"
+        app:tabTextColor="#80FFFFFF"
+        app:tabTextAppearance="@style/tabText"
+        app:tabSelectedTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMates" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPagerMates"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="106dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayoutMates" />
+
 </android.support.constraint.ConstraintLayout>

@@ -36,7 +36,7 @@ public class FragmentMru extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         Button btn1 = getView().findViewById(R.id.fisicaMRU_btn);
         Button btn2 = getView().findViewById(R.id.fisicaMRU1_btn);
-        final Toast soloIncognita = Toast.makeText(getActivity(),"No más de un incógnita",Toast.LENGTH_LONG);
+        final Toast soloIncognita = Toast.makeText(getActivity(),R.string.soloIncognita,Toast.LENGTH_LONG);
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override

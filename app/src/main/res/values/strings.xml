@@ -12,10 +12,17 @@
         <string name="help">Ayuda</string>
         <string name="freeFall">Caída libre</string>
         <string name="calc">Calcular</string>
+        <string name="reset" translatable="false">Reset</string>
 
-        <string name="mrua" translatable="false">MRUA</string>
-        <string name="mru" translatable="false">MRU</string>
-        <string name="mcu" translatable="false">MCU</string>
+        <string name="mrua">MRUA</string>
+        <string name="mru">MRU</string>
+        <string name="mcu">MCU</string>
+
+        <string name="trigo">Trigonometría</string>
+        <string name="areas">Áreas</string>
+
+        <string name="elec">Electricidad</string>
+        <string name="energia">Energía</string>
 
     //IRRELEVANTES
         <string name="defaultG" translatable="false">-9.8</string>
@@ -26,6 +33,12 @@
         <string name="metrosEntreSegundo" translatable="false">m/s</string>
         <string name="metrosEntreSegundoCuadrado" translatable="false">m/s²</string>
         <string name="segundos" translatable="false">s</string>
+
+        <string name="unaIncognita">Llena los blancos</string>
+        <string name="soloIncognita">No más de una incógnita</string>
+
+        <string name="ec">Ec</string>
+        <string name="ep">Ep</string>
 
 
 //**************************************************************************************************
@@ -46,8 +59,19 @@
             <string name="phiFormula" translatable="false">φ = φ0 + ω(t-t0)</string>
             <string name="seccFormula" translatable="false">S = φ * R</string>
 
+        //TENO
+            <string name="ecFormula">Ec = 1/2(m*v²)</string>
+            <string name="epFormula">Ep = m*g*h</string>
+
+        //MATES
+            <string name="romboArea">Rombo: a = (D*d)/2</string>
+            <string name="cirArea">Círculo: a = π*r²</string>
+            <string name="cuadradoArea">Cuadrado: a = b*h</string>
+            <string name="triArea">Triángulo: a = (b*h)/2</string>
+
+
 //**************************************************************************************************
-    //VARIABLES
+    //HINTS
 
         //EN EJE X
             <string name="x0">Posición inicial (x0)</string>
@@ -62,6 +86,30 @@
             <string name="y0">Altura inicial (y0)</string>
             <string name="y1">Altura final (y1)</string>
 
+        //ÁREAS
+            <string name="area">Área (a)</string>
+            <string name="base">Base (b)</string>
+            <string name="altura">Altura (h)</string>
+            <string name="radio">Radio (R)</string>
+            <string name="DM">Diagonal mayor (D)</string>
+            <string name="dm">Diagonal menor (d)</string>
+
+        //TECNO
+            <string name="work" translatable="false">Work (W)</string>
+            <string name="fuerza">Fuerza (F)</string>
+            <string name="distancia">Distancia (d)</string>
+            <string name="cosAlpha" translatable="false">Cos α</string>
+            <string name="masa">Masa (m)</string>
+
+            <string name="eCinetica">E. cinética (Ec)</string>
+            <string name="ePotencial">E. potencial (Ec)</string>
+
+            <string name="voltage">Voltage (V)</string>
+            <string name="resistencia">Resistencia (R)</string>
+            <string name="intensidad">Intensidad (I)</string>
+            <string name="potencia">Potencia (P)</string>
+
+
         //INDIFERENTES
             <string name="t1">Tiempo final (t1)</string>
             <string name="t0">Tiempo inicial (t0)</string>
@@ -70,24 +118,44 @@
         //MCU
             <string name="w">Vel. angular (ω)</string>
             <string name="phi">Phi (rad) (φ)</string>
-            <string name="phi0">Phi final (rad) (φ)</string>
+            <string name="phi0">Phi final (rad) (φ0)</string>
             <string name="sección">Sección (S)</string>
             <string name="R">Radio (R)</string>
             <string name="deltaPhi">Phi (rad) (Δφ)</string>
 
 
+        //TRIGONOMETRÍA
+            <string name="angulo">Ángulo (grados)</string>
+            <string name="alpha">α (grados)</string>
+            <string name="beta">β (grados)</string>
+
+            <string name="sumaSin" translatable="false">sin(α+β): sinα*cosβ + cosα*sinβ</string>
+            <string name="restaSin" translatable="false">sin(α-β): sinα*cosβ - cosα*sinβ</string>
+
+            <string name="sumaCos" translatable="false">cos(α+β): cosα*cosβ + sinα*sinβ</string>
+            <string name="restaCos" translatable="false">cos(α-β): cosα*cosβ + sinα*sinβ</string>
+
+    <string name="propertiesAngulo">Propiedades del ángulo</string>
+            <string name="leyOhm">Ley de Ohm: V = I*R</string>
+            <string name="potenciaElec">Potencia elec.: P = V*I</string>
+
+            <string name="suma">Suma</string>
+            <string name="resta">Resta</string>
+
+
 //**************************************************************************************************
     //TOASTS
         <string name="helpHow">Deja en blanco la incógnita que quieras saber</string>
+        <string name="helpHowLlenar">Llena todo para saber el resultado</string>
         <string name="noNegative">No puede ser negativo!</string>
 
 
     //NO EXISTE
-    <string name="tNo">t no es posible</string>
-    <string name="vNo">v no es posible</string>
-    <string name="wNo">ω no es posible</string>
-    <string name="v0No">v0 no es posible</string>
-    <string name="xNo">x no es posible</string>
-    <string name="noEs"> no es posible</string>
+        <string name="tNo">t no es posible</string>
+        <string name="vNo">v no es posible</string>
+        <string name="wNo">ω no es posible</string>
+        <string name="v0No">v0 no es posible</string>
+        <string name="xNo">x no es posible</string>
+        <string name="noEs"> no es posible</string>
 
 </resources>

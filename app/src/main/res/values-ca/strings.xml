@@ -5,7 +5,7 @@
     <string name="mates">Matemàtiques</string>
     <string name="tecno">Tecnologia</string>
     <string name="about">Sobre mi</string>
-    <string name="freeFall">CAIGUDA LLIURE</string>
+    <string name="freeFall">Caiguda lliure</string>
     <string name="g">Gravetat (g)</string>
     <string name="t">Temps (t)</string>
     <string name="v0">Velocitat inicial (v0)</string>
@@ -29,10 +29,51 @@
     <string name="w">Vel. angular (ω)</string>
     <string name="phi0">Phi final (rad) (φ)</string>
     <string name="and">i</string>
-    <string name="d">Distància (x)</string>
+    <string name="d">Distància (Δx)</string>
     <string name="deltaPhi">Phi (rad) (Δφ)</string>
     <string name="xNo">x no és possible</string>
     <string name="noEs">" no és possible"</string>
     <string name="v0No">v0 no és possible</string>
     <string name="wNo">ω no és possible</string>
+    <string name="alpha">α (graus)</string>
+    <string name="beta">β (graus)</string>
+    <string name="trigo">Trigonometria</string>
+    <string name="elec">Electricitat</string>
+    <string name="energia">Energia</string>
+    <string name="areas">Àreas</string>
+    <string name="angulo">Àngul (grados)</string>
+    <string name="area">Àrea (a)</string>
+    <string name="altura">Altura (h)</string>
+    <string name="DM">Diagonal major (D)</string>
+    <string name="base">Base (b)</string>
+    <string name="cirArea">Círcul: a = π*r²</string>
+    <string name="cuadradoArea">Quadrat: a = b*h</string>
+    <string name="distancia">Distància (d)</string>
+    <string name="dm">Diagonal menor (d)</string>
+    <string name="eCinetica">E. cinètica (Ec)</string>
+    <string name="ePotencial">E. potencial (Ec)</string>
+    <string name="ecFormula">Ec = 1/2(m*v²)</string>
+    <string name="epFormula">Ep = m*g*h</string>
+    <string name="fuerza">Força (F)</string>
+    <string name="intensidad">Intensitat (I)</string>
+    <string name="masa">Massa (m)</string>
+    <string name="potencia">Potència (P)</string>
+    <string name="radio">Radi (R)</string>
+    <string name="resistencia">Resistència (R)</string>
+    <string name="resta">Resta</string>
+    <string name="triArea">Triàngul: a = (b*h)/2</string>
+    <string name="voltage">Voltatge (V)</string>
+    <string name="suma">Suma</string>
+    <string name="romboArea">Rombe: a = (D*d)/2</string>
+    <string name="mcu">MCU</string>
+    <string name="mru">MRU</string>
+    <string name="mrua">MRUA</string>
+    <string name="propertiesAngulo">Propietats de l\'angle</string>
+    <string name="leyOhm">Llei d\'Ohm: V = I*R</string>
+    <string name="potenciaElec">Potència elec.: P = V*I</string>
+    <string name="soloIncognita">No més d\'una incògnita</string>
+    <string name="unaIncognita">Plena els blancs</string>
+    <string name="ec">Ec</string>
+    <string name="ep">Ep</string>
+    <string name="helpHowLlenar">Plena tot per saber el resultat</string>
 </resources>

@@ -5,6 +5,8 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -15,6 +17,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
+
+import com.example.testandroid.Fragments.Tecno.FragmentElectricidad;
+import com.example.testandroid.Fragments.Tecno.FragmentEnergia;
 
 public class TecnoActivity extends AppCompatActivity {
 
@@ -31,6 +36,36 @@ public class TecnoActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle(getString(R.string.tecno));
 
+        //declaració del tablayout
+        final TabLayout tabLayout = findViewById(R.id.tabLayoutTecno);
+        final ViewPager viewPager = findViewById(R.id.viewPagerTecno);
+        final ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
+
+        //afegir les tabs per anar als diferents fragments
+        adapter.addFragment(new FragmentElectricidad(), getString(R.string.elec));
+        adapter.addFragment(new FragmentEnergia(), getString(R.string.energia));
+        //adapter.addFragment(new FragmentAreas(), getString(R.string.derivadas));
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        //creació del botó per tornar al homepage
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +73,9 @@ public class TecnoActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
+
     }
 
     private void changeStatusBarColor(String color){
