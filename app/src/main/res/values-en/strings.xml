@@ -35,16 +35,16 @@
     <string name="intensidad">Intensity (I)</string>
     <string name="masa">Mass (kg)</string>
     <string name="mates">Math</string>
-    <string name="mcu">UCM</string>
-    <string name="mru">RUM</string>
-    <string name="mrua">UALM</string>
+    <string name="mcu">Uniform Circular Movement</string>
+    <string name="mru">Uniform movement</string>
+    <string name="mrua">Uniformly Acc. Movement</string>
     <string name="noEs">" it's not possible"</string>
     <string name="noNegative">Can\'t be negative!</string>
     <string name="phi">Phi (rad) (φ)</string>
     <string name="phi0">Final phi (rad) (φ)</string>
     <string name="potencia">Power (P)</string>
     <string name="radio">Radius (R)</string>
-    <string name="resistencia">Resistance</string>
+    <string name="resistencia">Resistance (R)</string>
     <string name="resta">Substraction</string>
     <string name="romboArea">Rhombus: a = (D*d)/2</string>
     <string name="sección">Section (S)</string>
@@ -60,7 +60,7 @@
     <string name="v0">Initial velocity (v0)</string>
     <string name="v0No">v0 is not possible</string>
     <string name="vNo">v is not possible</string>
-    <string name="voltage">Voltage</string>
+    <string name="voltage">Voltage (V)</string>
     <string name="w">Angular vel. (ω)</string>
     <string name="wNo">ω is not possible</string>
     <string name="x0">Initial position (x0)</string>
