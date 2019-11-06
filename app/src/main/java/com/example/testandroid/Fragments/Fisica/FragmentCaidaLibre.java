@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 
 import com.example.testandroid.FisicaActivity;
 import com.example.testandroid.FormulasMRUA;
@@ -25,6 +27,8 @@ public class FragmentCaidaLibre extends Fragment {
 
     FormulasMRUyMCU ras = new FormulasMRUyMCU();
     FormulasMRUA ras2 = new FormulasMRUA();
+
+    private static DecimalFormat df2 = new DecimalFormat("#.##");
 
     private EditText g1FF, a1FFV1, a1FFV2;
     private TextInputLayout y01FF1, y11FF1, g1FF1;
@@ -175,7 +179,7 @@ public class FragmentCaidaLibre extends Fragment {
                         if (Double.isNaN(res)) {
                             textView.setText(R.string.tNo);
                         } else {
-                            textView.setText("t = " + String.format("%.2f", res) + R.string.segundos);
+                            textView.setText("t = " + df2.format(res) + "s");
                         }
                     } else if (valueY0.equals("0")) {
                         y1 = parse(valueY1);
@@ -189,11 +193,11 @@ public class FragmentCaidaLibre extends Fragment {
                         res = ((-1*v0)+Math.sqrt((o)))/(g);
                         if (res <= 0) {
                             double res2 = ((-1*v0)-Math.sqrt((o)))/(g);
-                            textView.setText("t = " + String.format("%.2f", res2) + "s " + R.string.and + String.format("%.2f", res) + "s");
+                            textView.setText("t = " + df2.format(res2) + "s " + R.string.and + df2.format(res) + "s");
                         } else if (Double.isNaN(res)) {
                             textView.setText(R.string.tNo);
                         } else {
-                            textView.setText("t = " + String.format("%.2f", res) + R.string.segundos);
+                            textView.setText("t = " + df2.format(res) + "s");
                         }
                     } else {
                         y1 = parse(valueY1);
@@ -205,11 +209,11 @@ public class FragmentCaidaLibre extends Fragment {
                         res = ((-1*v0)+Math.sqrt((v0*v0)-4*(((g/2))*(y0-y1))))/(g);
                         if (res <= 0) {
                             double res2 = ((-1*v0)-Math.sqrt((v0*v0)-4*(((g/2))*(y1y0))))/(g);
-                            textView.setText("t = " + String.format("%.2f", res2) + "s " + R.string.and + String.format("%.2f", res) + "s");
+                            textView.setText("t = " + df2.format(res2) + "s " + R.string.and + df2.format(res) + "s");
                         } else if (Double.isNaN(res)) {
                             textView.setText(R.string.tNo);
                         } else {
-                            textView.setText("t = " + String.format("%.2f", res) + R.string.segundos);
+                            textView.setText("t = " + df2.format(res) + "s");
                         }
                     }
                 } else if (valueV0.equals("")) {
@@ -221,18 +225,18 @@ public class FragmentCaidaLibre extends Fragment {
                     if (Double.isNaN(res)) {
                         textView1.setText(R.string.v0No);
                     } else {
-                        textView1.setText("v = " + String.format("%.2f", res) + R.string.metrosEntreSegundo);
+                        textView.setText("v = " + df2.format(res) + "m/s");
                     }
                 } else if (valueG.equals("")) {
                     y1 = parse(valueY1);
                     y0 = parse(valueY0);
                     t = parse(valueT);
                     v0 = parse(valueV0);
-                    res = ((y0-y1)+(v0*t))/t;
+                    res = (2*(y1-y0-(v0*t)))/(t*t);
                     if (Double.isNaN(res)) {
                         textView1.setText(gORa + R.string.noEs);
                     } else {
-                        textView.setText(gORa + " = " + String.format("%.2f", res) + R.string.metrosEntreSegundoCuadrado);
+                        textView.setText(gORa + " = " + df2.format(res) + "m/s²");
                     }
                 } else if (valueY0.equals("")) {
                     y1 = parse(valueY1);
@@ -240,14 +244,14 @@ public class FragmentCaidaLibre extends Fragment {
                     v0 = parse(valueV0);
                     g = parse(valueG);
                     res = y1+(((g/2)*-1)*(t*t))-v0*t;
-                    textView.setText(y0ORx0 + " = " + String.format("%.2f", res) + R.string.metros);
+                    textView.setText(y0ORx0 + " = " + df2.format(res) + "m");
                 } else if(valueY1.equals("")) {
                     y0 = parse(valueY0);
                     v0 = parse(valueV0);
                     t = parse(valueT);
                     g = parse(valueG);
-                    res = y0+(v0*t)-((g/2)*-1)*(t*t);
-                    textView.setText(y1ORx1 + " = " + String.format("%2", res) + R.string.metros);
+                    res = y0+(v0*t)+((g/2))*(t*t);
+                    textView.setText(y1ORx1 + " = " + df2.format(res) + "m");
                 }
 
             }
@@ -304,14 +308,14 @@ public class FragmentCaidaLibre extends Fragment {
                     t1 = parse(valueT);
                     t0 = parse(valueT0);
                     res = ras.calcX1(v0, a, t1, t0);
-                    textView1.setText("v = " + String.format("%.2f", res) + R.string.metrosEntreSegundo);
+                    textView1.setText("v = " + String.format("%.2f", res) + "m/s");
                 } else if (valueV0.equals("")) {
                     v = parse(valueV);
                     a = parse(valueA);
                     t1 = parse(valueT);
                     t0 = parse(valueT0);
                     res = ras.calcX0(v, a, t1, t0);
-                    textView1.setText("v = " + String.format("%.2f", res) + R.string.metrosEntreSegundo);
+                    textView1.setText("v = " + String.format("%.2f", res) + "m/s");
                 } else if (valueA.equals("")) {
                     v = parse(valueV);
                     v0 = parse(valueV0);
@@ -321,7 +325,7 @@ public class FragmentCaidaLibre extends Fragment {
                     if (Double.isNaN(res)) {
                         textView1.setText(gORa + R.string.noEs);
                     } else {
-                        textView1.setText(gORa + " = " + String.format("%.2f", res) + R.string.metrosEntreSegundoCuadrado);
+                        textView1.setText(gORa + " = " + String.format("%.2f", res) + "m/s^2");
                     }
                 } else if (valueT.equals("")) {
                     v = parse(valueV);
@@ -332,7 +336,7 @@ public class FragmentCaidaLibre extends Fragment {
                     if (Double.isNaN(res)) {
                         textView1.setText(R.string.tNo);
                     } else {
-                        textView1.setText("t = " + String.format("%.2f", res) + R.string.segundos);
+                        textView1.setText("t = " + String.format("%.2f", res) + "s");
                     }
                 } else if (valueT0.equals("")) {
                     v = parse(valueV);
@@ -343,7 +347,7 @@ public class FragmentCaidaLibre extends Fragment {
                     if (Double.isNaN(res)) {
                         textView1.setText(R.string.tNo);
                     } else {
-                        textView1.setText("t = " + String.format("%.2f", res) + R.string.segundos);
+                        textView1.setText("t = " + String.format("%.2f", res) + "s");
                     }
                 }
             }
@@ -425,7 +429,7 @@ public class FragmentCaidaLibre extends Fragment {
                     if (Double.isNaN(res)) {
                         textView2.setText(gORa + R.string.noEs);
                     } else {
-                        textView2.setText(gORa + " = " + String.format("%.2f", res) + "m");
+                        textView2.setText(gORa + " = " + String.format("%.2f", res) + "m/s^2");
                     }
                 } else if (valueV0.equals("")) {
                     x0 = parse(valueX0);

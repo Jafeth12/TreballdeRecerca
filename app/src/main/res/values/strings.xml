@@ -45,14 +45,14 @@
     //FÓRMULAS
 
         //EN EJE X
-            <string name="v2Formula" translatable="false">v = v0² + 2a(x-x0)</string>
+            <string name="v2Formula" translatable="false">v² = v0² + 2a(x-x0)</string>
             <string name="mruaFormula" translatable="false">x = x0 + v*t + a/2*Δt²</string>
             <string name="v1Formula" translatable="false">v = v0 + a(t-t0)</string>
 
         //EN EJE Y
             <string name="freeFallFormula" translatable="false">y = y0 + v*t - g/2*Δt²</string>
             <string name="v1GFormula" translatable="false">v = v0 - g(t-t0)</string>
-            <string name="v2GFormula" translatable="false">v = v0² - 2g(y-y0)</string>
+            <string name="v2GFormula" translatable="false">v² = v0² - 2g(y-y0)</string>
 
         //MCU
             <string name="wFormula" translatable="false">ω = Δφ/Δt </string>
