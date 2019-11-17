@@ -8,5 +8,3 @@ This app presents you some very popular physics, math, and general enginerring f
 
 ## Play Store
 I've uploaded this app to Play Store, and you can find it in [this](https://play.google.com/store/apps/details?id=com.jafeth.testandroid) link.
-
-![play store](https://prnt.sc/py42y4)
